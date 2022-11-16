@@ -1,0 +1,80 @@
+body
+{
+    margin: 0;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.container1 {
+  background-color: black;
+}
+.row1 {
+  /* width: 80%; */
+  margin: auto;
+}
+.logo1 {
+    padding-top: 0.5%;
+  font-size: 1.5rem;
+}
+.navbar1 {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  align-items: center;
+}
+ul{margin-top: 13px;
+}
+.navbar1 .main-menu {
+  display: flex;
+}
+.main-menu li a {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: rgba(0, 123, 255, 0.774);
+  color: white;
+}
+.menu-btn {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .main-menu {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    background-color: #252525;
+    transition: 0.5s all ease;
+    /* visibility: hidden; */
+    display: none;
+    align-items: center;
+    transform: translateX(-800px);
+    padding-top: 60px;
+  }
+
+  .main-menu.show {
+    transform: translateX(0px);
+    transition: 0.5s all ease;
+  }
+  .main-menu li a {
+    margin-bottom: 10px;
+    display: block;
+  }
+  .menu-btn {
+    display: block;
+    position: absolute;
+    color: white;
+    top: 10px;
+    right: 30px;
+    font-size: 2rem;
+  }
+}

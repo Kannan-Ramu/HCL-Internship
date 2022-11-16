@@ -1,0 +1,42 @@
+body{margin: 0}
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  background-color: rgba(0, 123, 255, 0.774);
+  padding: 15px;
+}
+.container img {
+  width: 100%;
+  display: block;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  transition: all 100ms ease-out;
+}
+.container img:hover {
+  transform: scale(1.04);
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+ 
+}
+.container img:hover ~ .bottom-center {
+    background: gray;
+  left:-7px;
+  bottom:-10px;
+  height:10%;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5);
+  width:104%;
+}
+.imgcontainer {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.bottom-center {
+  position: absolute;
+  bottom: 8px;
+  left: 40%;
+}
+
+
